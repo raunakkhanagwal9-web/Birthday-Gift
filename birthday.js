@@ -792,6 +792,14 @@ function fire() {
   played = true;
   drawing = false;
   stopBeat();
+  
+  // 🎵 Music start karo
+  const bgMusic = document.getElementById('bgMusic');
+  if (bgMusic) {
+    bgMusic.volume = 0.6;
+    bgMusic.play().catch(() => {});
+  }
+  
   filmTL = buildFilm(shotGeom());
   filmTL.play(0);
 }
